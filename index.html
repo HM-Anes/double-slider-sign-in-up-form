@@ -21,17 +21,18 @@
     <body class="flex">
         <div class="container flex">
             <!-- Sign-in section -->
-            <div class="sign-in flex">
+            <div class="sign-in-up flex">
                 <h1>Welcome Back!</h1>
                 <p>
                     To keep connected with us please login with your personal
                     info
                 </p>
                 <!-- sign in button -->
-                <button type="button">sign in</button>
+                <button type="button" class="switch">sign in</button>
             </div>
+
             <!-- Form section -->
-            <form action="" class="flex">
+            <form action="#" class="flex">
                 <h1>Create Account</h1>
                 <div class="links flex">
                     <!-- facebook -->
@@ -58,8 +59,45 @@
                     <!-- sign up button -->
                     <button type="submit">sign up</button>
                 </div>
-                <!-- sign up button -->
             </form>
+
+            <!-- Form section -->
+            <form action="#" class="flex hide">
+                <h1>Sign in</h1>
+                <div class="links flex">
+                    <!-- facebook -->
+                    <button type="button" aria-label="Sign up with Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </button>
+                    <!-- google -->
+                    <button type="button" aria-label="Sign up with Google">
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </button>
+                    <!-- linked in -->
+                    <button type="button" aria-label="Sign up with LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </button>
+                </div>
+                <div class="input-fields flex">
+                    <p>or use your account</p>
+                    <!-- Email -->
+                    <input type="email" placeholder="Email" />
+                    <!-- Password -->
+                    <input type="password" placeholder="Password" />
+                    <!-- forgot the password -->
+                    <a href="http://">Forgot you password?</a>
+                    <!-- sign up button -->
+                    <button type="submit">sign in</button>
+                </div>
+            </form>
+
+            <!-- Sign-in section -->
+            <div class="sign-in-up flex hide">
+                <h1>Hello friend!</h1>
+                <p>Enter your personal details and start journy with us</p>
+                <!-- sign in button -->
+                <button type="button" class="switch">sign up</button>
+            </div>
         </div>
         <script src="script.js"></script>
     </body>

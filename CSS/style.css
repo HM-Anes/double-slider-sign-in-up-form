@@ -1,6 +1,6 @@
 /* Start Variables */
-:root {
-}
+/* :root {
+} */
 /* End Variables */
 
 /* Start global rules */
@@ -22,6 +22,15 @@ ul {
     align-items: center;
     justify-content: center;
 }
+.hide {
+    display: none;
+}
+.radius-left {
+    border-radius: 18px 0 0 18px !important;
+}
+.radius-right {
+    border-radius: 0 18px 18px 0 !important;
+}
 /* End components */
 
 body {
@@ -38,8 +47,8 @@ body {
     width: 74vw;
 }
 
-/* Start Sign-in and form sections */
-.container .sign-in,
+/* Start Sign-in-up and form sections */
+.container .sign-in-up,
 .container form {
     flex-direction: column;
     gap: 30px;
@@ -57,8 +66,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
-/* Sign-in and Sign-up buttons */
-.container .sign-in > button,
+/* Sign-in-up buttons */
+.container .sign-in-up > button,
 .container .input-fields > button {
     color: #fff;
     padding: 15px 45px;
@@ -67,20 +76,20 @@ body {
     font-size: 14px;
     cursor: pointer;
 }
-/* End Sign-in and form sections */
+/* End Sign-in-up and form sections */
 
-/* Start Sign-in section */
-.container .sign-in {
+/* Start Sign-in-up section */
+.container .sign-in-up {
     width: 50%;
     border-radius: 18px 0 0 18px;
     background-color: #ff4b3c;
     color: #fff;
 }
-.container .sign-in > button {
+.container .sign-in-up > button {
     background-color: transparent;
     border: solid 1px #fff;
 }
-/* End Sign-in section */
+/* End Sign-in-up section */
 
 /* Start form section */
 .container form {
@@ -88,7 +97,7 @@ body {
     border-radius: 0 18px 18px 0;
     background-color: #ffffff;
 }
-/* Sign-up button */
+/* Sign-in-up button */
 .container .input-fields > button {
     background-color: #ff4b3c;
     border: solid 1px #ff4b3c;
@@ -113,7 +122,7 @@ body {
 /* Start Input fields */
 .container form .input-fields {
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
 }
 .container form input {
     background-color: #ededed;
@@ -132,3 +141,10 @@ body {
 }
 /* End Input fields */
 /* End form section */
+
+a {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+}
