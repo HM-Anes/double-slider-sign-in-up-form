@@ -1,7 +1,5 @@
 /* Start Variables */
 :root {
-    --main-color: ;
-    --secondary-color: ;
 }
 /* End Variables */
 
@@ -16,119 +14,121 @@
 ul {
     list-style: none;
 }
-.container {
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-/* small */
-@media (min-width: 768px) {
-    .container {
-        width: 750px;
-    }
-}
-
-/* meduim */
-@media (min-width: 992px) {
-    .container {
-        width: 970px;
-    }
-}
-
-/* large */
-@media (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }
-}
 /* End global rules */
 
 /* Start components */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* End components */
 
 body {
+    background-color: #f5f5f7;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f7;
+    font-family: "Archivo Black", sans-serif;
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 18px;
+    background-color: #f5f5f7;
+    box-shadow: 4px 8px 20px 4px #989898;
+    width: 74vw;
 }
-/* Start sections */
-.container > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+/* Start Sign-in and form sections */
+.container .sign-in,
+.container form {
     flex-direction: column;
     gap: 30px;
-    padding: 40px 60px !important;
-    width: 65vw;
+    padding: 40px 60px;
+    width: 100%;
     height: 80vh;
     text-align: center;
 }
-/* section one Text */
-.container .Text {
-    background-color: #ff4b3c;
-    color: #fff;
-}
 .container h1 {
     margin: 0;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: bold;
 }
-.container .Text p {
+.container p {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
-.container p {
-    font-weight: lighter;
-}
-.container button {
+/* Sign-in and Sign-up buttons */
+.container .sign-in > button,
+.container .input-fields > button {
     color: #fff;
     padding: 15px 45px;
     border-radius: 25px;
-    font-weight: bold;
     text-transform: uppercase;
     font-size: 14px;
+    cursor: pointer;
 }
-.container .Text button {
+/* End Sign-in and form sections */
+
+/* Start Sign-in section */
+.container .sign-in {
+    width: 50%;
+    border-radius: 18px 0 0 18px;
+    background-color: #ff4b3c;
+    color: #fff;
+}
+.container .sign-in > button {
     background-color: transparent;
     border: solid 1px #fff;
 }
-/* section Two Form */
-.container .Form {
+/* End Sign-in section */
+
+/* Start form section */
+.container form {
+    width: 50%;
+    border-radius: 0 18px 18px 0;
     background-color: #ffffff;
 }
-.container .links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-}
-.container .links ul {
-    border: solid 1px lightgray;
-    padding: 14px;
-    border-radius: 50%;
-}
-.container .Form button {
+/* Sign-up button */
+.container .input-fields > button {
     background-color: #ff4b3c;
     border: solid 1px #ff4b3c;
 }
-.container .Form .Input {
-    display: flex;
+/* Start links buttons */
+.container .links {
+    gap: 30px;
+}
+.container .links button {
+    background-color: transparent;
+    border: solid 1px lightgray;
+    cursor: pointer;
+    padding: 14px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+.container .links button:hover {
+    transform: translateY(-4px);
+}
+/* End links buttons */
+
+/* Start Input fields */
+.container form .input-fields {
     flex-direction: column;
     gap: 10px;
 }
-.container .Form input {
+.container form input {
     background-color: #ededed;
     border: none;
     width: 28vw;
     padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
 }
-/* End sections */
+.container form input:focus {
+    outline: 2px solid #ededed;
+}
+.container form input:hover {
+    transform: translateX(4px);
+}
+/* End Input fields */
+/* End form section */
