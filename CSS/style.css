@@ -22,15 +22,6 @@ ul {
     align-items: center;
     justify-content: center;
 }
-.hide {
-    display: none;
-}
-.radius-left {
-    border-radius: 18px 0 0 18px !important;
-}
-.radius-right {
-    border-radius: 0 18px 18px 0 !important;
-}
 /* End components */
 
 body {
@@ -45,17 +36,29 @@ body {
     background-color: #f5f5f7;
     box-shadow: 4px 8px 20px 4px #989898;
     width: 74vw;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
 }
 
-/* Start Sign-in-up and form sections */
-.container .sign-in-up,
+/* Start sign-overlay and form sections */
+.container .sign-overlay,
 .container form {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+}
+.container .content-form,
+.container .content-sign {
+    position: absolute;
     flex-direction: column;
     gap: 30px;
     padding: 40px 60px;
-    width: 100%;
-    height: 80vh;
-    text-align: center;
+    transition: transform 0.6s ease-in-out;
 }
 .container h1 {
     margin: 0;
@@ -66,8 +69,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
-/* Sign-in-up buttons */
-.container .sign-in-up > button,
+/* sign-overlay and form sections buttons */
+.container .sign-overlay button,
 .container .input-fields > button {
     color: #fff;
     padding: 15px 45px;
@@ -76,28 +79,87 @@ body {
     font-size: 14px;
     cursor: pointer;
 }
-/* End Sign-in-up and form sections */
+/* End sign-overlay and form sections */
 
-/* Start Sign-in-up section */
-.container .sign-in-up {
-    width: 50%;
-    border-radius: 18px 0 0 18px;
+/* Start sign-overlay section */
+.container .sign-overlay {
+    transform: translateX(50%);
     background-color: #ff4b3c;
     color: #fff;
 }
-.container .sign-in-up > button {
+.container.active .sign-overlay {
+    transform: translateX(-50%);
+}
+
+.container .sign-up-overlay {
+    z-index: 2;
+}
+.container.active .sign-up-overlay {
+    z-index: 3;
+}
+.container .sign-in-overlay {
+    z-index: 3;
+}
+.container.active .sign-in-overlay {
+    z-index: 2;
+}
+
+.container .content-sign-up {
+    transform: translateX(-200%);
+}
+.container.active .content-sign-up {
+    transform: translateX(0%);
+}
+.container .content-sign-in {
+    transform: translateX(0%);
+}
+.container.active .content-sign-in {
+    transform: translateX(200%);
+}
+
+/* sign-overlay button */
+.container .sign-overlay button {
     background-color: transparent;
     border: solid 1px #fff;
 }
-/* End Sign-in-up section */
+/* End sign-overlay section */
 
 /* Start form section */
 .container form {
-    width: 50%;
-    border-radius: 0 18px 18px 0;
+    transform: translateX(-50%);
     background-color: #ffffff;
 }
-/* Sign-in-up button */
+.container.active form {
+    transform: translateX(50%);
+}
+
+.container .sign-in {
+    z-index: 1;
+}
+.container.active .sign-in {
+    z-index: 2;
+}
+.container .sign-up {
+    z-index: 2;
+}
+.container.active .sign-up {
+    z-index: 1;
+}
+
+.container .content-in {
+    transform: translateX(-200%);
+}
+.container.active .content-in {
+    transform: translateX(0%);
+}
+.container .content-up {
+    transform: translateX(0%);
+}
+.container.active .content-up {
+    transform: translateX(200%);
+}
+
+/* form sections button */
 .container .input-fields > button {
     background-color: #ff4b3c;
     border: solid 1px #ff4b3c;
@@ -139,8 +201,6 @@ body {
 .container form input:hover {
     transform: translateX(4px);
 }
-/* End Input fields */
-/* End form section */
 
 a {
     color: black;
@@ -148,3 +208,5 @@ a {
     text-decoration: none;
     font-size: 18px;
 }
+/* End Input fields */
+/* End form section */
