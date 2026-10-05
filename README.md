@@ -22,3 +22,5 @@ registration views. Built with HTML, CSS, and JavaScript.
 - HTML5
 - CSS3
 - JavaScript
+
+> **Note:** This project is built for desktop screens only. It has no responsive styles (no media queries), so the layout will not adapt to phones or tablets. My focus was on implementing the core idea rather than the visual design.
